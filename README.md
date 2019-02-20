@@ -1,3 +1,5 @@
+# *** In development ***
+
 # Introduction
 
 Silverstripe Mix is a wrapper around Laravel Mix to simplify SS module and theme development.
