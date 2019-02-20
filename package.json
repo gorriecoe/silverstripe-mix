@@ -1,0 +1,26 @@
+{
+  "name": "silverstripe-mix",
+  "description": "Silverstripe Mix is a wrapper around Laravel Mix.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorriecoe/silverstripe-mix.git"
+  },
+  "keywords": [
+    "silverstripe",
+    "mix",
+    "webpack"
+  ],
+  "author": "Gorrie Coe",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/gorriecoe/silverstripe-mix/issues"
+  },
+  "homepage": "https://github.com/gorriecoe/silverstripe-mix#readme",
+  "main": "src/index.js",
+  "dependencies": {
+    "@silverstripe/webpack-config": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.14"
+  }
+}
