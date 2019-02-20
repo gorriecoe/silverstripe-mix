@@ -5,20 +5,35 @@ const {
     externalJS,
     moduleJS,
     pluginJS,
-    moduleCSS,
+    moduleCSS, // @todo add css support
     pluginCSS,
 } = require('@silverstripe/webpack-config')
+
+const Path = require('path')
+const ENV = process.env.NODE_ENV
+const PATHS = {
+    // the root path, where your webpack.config.js is located.
+    ROOT: Path.resolve(),
+    // your node_modules folder name, or full path
+    MODULES: 'node_modules',
+    // relative path from your css files to your other files, such as images and fonts
+    FILES_PATH: '../',
+    // thirdparty folder containing copies of packages which wouldn't be available on NPM
+    THIRDPARTY: 'thirdparty',
+    // the root path to your javascript source files
+    SRC: Path.resolve('client/src'),
+}
 
 mix.setPublicPath('client/dist')
 mix.setResourceRoot('client/src')
 
-// mix.webpackConfig({
-//     devtool: (ENV !== 'production') ? 'source-map' : '',
-//     resolve: resolveJS(ENV, PATHS),
-//     externals: externalJS(ENV, PATHS),
-//     module: moduleJS(ENV, PATHS),
-//     plugins: pluginJS(ENV, PATHS)
-// })
+mix.webpackConfig({
+    devtool: (ENV !== 'production') ? 'source-map' : '',
+    resolve: resolveJS(ENV, PATHS),
+    externals: externalJS(ENV, PATHS),
+    module: moduleJS(ENV, PATHS),
+    plugins: pluginJS(ENV, PATHS)
+})
 
 // export default mix
 
