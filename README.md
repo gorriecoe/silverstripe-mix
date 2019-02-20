@@ -28,7 +28,7 @@ const mix = require('silverstripe-mix')
 
 ## Documentation
 
-You may review the initial documentation [here](https://laravel-mix.com/docs/4.0/basic-example).
+You may review the initial documentation via [Laravel Mix](https://laravel-mix.com/docs/4.0/basic-example) with it's default configuation defined using [silverstripe/webpack-config](https://github.com/silverstripe/webpack-config)
 
 ## License
 
